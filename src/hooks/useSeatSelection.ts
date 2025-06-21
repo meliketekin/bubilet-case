@@ -2,11 +2,16 @@
 
 import {SeatStatusEnum} from '@/enums';
 import {Seat} from '@/interfaces';
-import {useState, useCallback, useEffect} from 'react';
+import {getSelectedSeats, saveSelectedSeats} from '@/utils/localStorage';
+import {useCallback, useEffect, useState} from 'react';
 
 export const useSeatSelection = () => {
   const [selectedSeats, setSelectedSeats] = useState<Seat[]>([]);
   const [seats, setSeats] = useState<Seat[]>([]);
+
+  useEffect(() => {
+    setSelectedSeats(getSelectedSeats());
+  }, []);
 
   const generateSeats = useCallback((): Seat[] => {
     const seats: Seat[] = [];
@@ -45,8 +50,20 @@ export const useSeatSelection = () => {
   }, []);
 
   useEffect(() => {
-    setSeats(generateSeats());
-  }, [generateSeats]);
+    const allSeats = generateSeats();
+    const savedSelectedIds = new Set(selectedSeats.map((s) => s.id));
+
+    const syncedSeats = allSeats.map((seat) =>
+      savedSelectedIds.has(seat.id)
+        ? { ...seat, status: SeatStatusEnum.SELECTED }
+        : seat
+    );
+    setSeats(syncedSeats);
+  }, [generateSeats, selectedSeats]);
+
+  useEffect(() => {
+    saveSelectedSeats(selectedSeats);
+  }, [selectedSeats]);
 
   const handleSeatClick = useCallback((seatId: string) => {
     setSeats((prevSeats) => {

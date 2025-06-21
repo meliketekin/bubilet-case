@@ -10,13 +10,7 @@ import Toast from '../Toast';
 
 import {useTranslations} from 'next-intl';
 import {ToastTypeEnum} from '@/enums';
-
-interface ToastState {
-  show: boolean;
-  type: ToastTypeEnum;
-  title: string;
-  message: string;
-}
+import { ToastState } from '@/interfaces';
 
 type SeatSelectionProps = Record<string, never>;
 

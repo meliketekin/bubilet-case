@@ -1,11 +1,7 @@
 {
   "Metadata": {
-    "title": "Şubilet Case | Koltuk Seçim Arayüzü",
-    "desc": "Next.js ile geliştirilmiş interaktif koltuk seçimi arayüzü."
-  },
-  "seo": {
     "title": "Şubilet",
-    "desc":"testtr"
+    "desc": "Next.js ile geliştirilmiş interaktif koltuk seçimi arayüzü."
   },
   "LocaleSwitcher": {
     "label": "Dil Değiştir",

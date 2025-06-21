@@ -10,12 +10,12 @@ To run this project locally, follow these steps:
 
 1. **Install dependencies:**
    ```bash
-   npm install
+   yarn install
    ```
 
 2. **Start the development server:**
    ```bash
-   npm run dev
+   yarn run dev
    ```
 
 3. **Open your browser:**

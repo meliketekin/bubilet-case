@@ -1,4 +1,4 @@
-import {SeatStatusEnum} from '@/enums';
+import {SeatStatusEnum, ToastTypeEnum} from '@/enums';
 
 export interface Seat {
   id: string;
@@ -31,4 +31,11 @@ export interface Event {
   date: string;
   time: string;
   block: string;
+}
+
+export interface ToastState {
+  show: boolean;
+  type: ToastTypeEnum;
+  title: string;
+  message: string;
 }
