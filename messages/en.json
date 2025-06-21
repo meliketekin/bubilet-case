@@ -1,0 +1,35 @@
+{
+  "Metadata": {
+    "title": "Şubilet | Seat Selection UI",
+    "desc": "An interactive seat selection user interface built with Next.js."
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, tr {🇹🇷 Turkish} en {🇺🇸 English} other {Bilinmeyen}}"
+  },
+  "SeatMap": {
+    "available": "Available",
+    "selected": "Selected",
+    "occupied": "Occupied",
+    "reserved": "Reserved",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "resetZoom": "Reset zoom"
+  },
+  "SeatSelection": {
+    "reservationTimeEndedToastTitle": "Reservation Time Ended",
+    "reservationTimeEndedToastMessage": "Reservation time ended, your selected seats have been cancelled."
+  },
+  "SelectedSeatsCard": {
+    "reservationTime": "Reservation time left:",
+    "selectedSeats": "Selected Seats",
+    "seatNumber": "Row - Seat",
+    "emptySeatsText": "Please select a seat to buy a ticket.",
+    "removeSeat": "Remove Seat",
+    "orderSummary": "Order Summary",
+    "ticketPrice": "Ticket Price",
+    "serviceFee": "Service Fee",
+    "totalAmount": "Total Amount",
+    "payNow": "Pay Now"
+    }
+}

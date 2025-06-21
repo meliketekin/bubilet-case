@@ -1,0 +1,39 @@
+{
+  "Metadata": {
+    "title": "Şubilet Case | Koltuk Seçim Arayüzü",
+    "desc": "Next.js ile geliştirilmiş interaktif koltuk seçimi arayüzü."
+  },
+  "seo": {
+    "title": "Şubilet",
+    "desc":"testtr"
+  },
+  "LocaleSwitcher": {
+    "label": "Dil Değiştir",
+    "locale": "{locale, select, tr {🇹🇷 Türkçe} en {🇺🇸 İngilizce} other {Bilinmeyen}}"
+  },
+  "SeatMap": {
+    "available": "Müsait",
+    "selected": "Seçildi",
+    "occupied": "Dolu",
+    "reserved": "Rezerve",
+    "zoomIn": "Yakınlaştır",
+    "zoomOut": "Uzaklaştır",
+    "resetZoom": "Sıfırla"
+  },
+  "SeatSelection": {
+    "reservationTimeEndedToastTitle": "Rezervasyon Süresi Doldu",
+    "reservationTimeEndedToastMessage": "Rezervasyon süresi doldu, seçili koltuklarınız iptal edildi."
+  },
+  "SelectedSeatsCard": {
+    "reservationTime": "Rezervasyon için kalan süre:",
+    "selectedSeats": "Seçilen Koltuklar",
+    "seatNumber": "Sıra - Koltuk",
+    "emptySeatsText": "Bilet almak için lütfen koltuk seçin.",
+    "removeSeat": "Koltuk Kaldır",
+    "orderSummary": "Sipariş Özeti",
+    "ticketPrice": "Bilet Fiyatı",
+    "serviceFee": "Hizmet Bedeli",
+    "totalAmount": "Toplam Tutar",
+    "payNow": "Şimdi Ödeme Yap"
+  }
+}

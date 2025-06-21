@@ -1,0 +1,273 @@
+.seatMapContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.seatMap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seatRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 32px;
+}
+
+.rowNumber {
+  width: 24px;
+  text-align: center;
+  font-weight: 600;
+  color: #666;
+  font-size: 12px;
+}
+
+.seatsContainer {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.seat {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover:not(:disabled) {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.available {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+
+  &:hover {
+    background: #e2e8f0;
+    border-color: #22c55e;
+  }
+}
+
+.selected {
+  background: #22c55e;
+  color: white;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+}
+
+.occupied {
+  background: #d1d5db;
+  color: #fff;
+}
+
+.reserved {
+  background: #f59e0b;
+  color: white;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.legendSeat {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.zoomButton {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #374151;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+
+  &:hover {
+    background: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.zoomControlsTopLeft {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 1200px) {
+  .legend {
+    gap: 24px;
+  }
+  
+  .seat {
+    width: 24px;
+    height: 24px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 992px) {
+  .seatMap {
+    max-height: 500px;
+  }
+  
+  .legend {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .seat {
+    width: 22px;
+    height: 22px;
+    font-size: 8px;
+  }
+  
+  .seatsContainer {
+    gap: 3px;
+  }
+  
+  .seatRow {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .seatMap {
+    max-height: 400px;
+  }
+  
+  .seat {
+    width: 20px;
+    height: 20px;
+    font-size: 7px;
+    border-radius: 4px;
+  }
+  
+  .seatsContainer {
+    gap: 0px;
+  }
+  
+  .seatRow {
+    gap: 8px;
+  }
+  
+  .rowNumber {
+    width: 20px;
+    font-size: 11px;
+  }
+  
+  .legend {
+    padding: 16px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .legendItem {
+    font-size: 12px;
+  }
+  
+  .legendSeat {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .zoomControlsTopLeft {
+    position: static;
+    margin-bottom: 8px;
+    justify-content: center;
+    width: 100%;
+    left: 0;
+    top: 0;
+    flex-direction: row;
+  }
+  .zoomButton {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+  .seat {
+    width: 18px;
+    height: 18px;
+    font-size: 7px;
+    border-radius: 3px;
+  }
+  .seatRow {
+    gap: 2px;
+  }
+  .rowNumber {
+    width: 14px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 400px) {
+  .zoomButton {
+    width: 26px;
+    height: 26px;
+    font-size: 11px;
+  }
+  .seat {
+    width: 14px;
+    height: 14px;
+    font-size: 6px;
+    border-radius: 2px;
+  }
+  .seatRow {
+    gap: 1px;
+  }
+  .rowNumber {
+    width: 10px;
+    font-size: 7px;
+  }
+} 
