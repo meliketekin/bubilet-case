@@ -11,13 +11,11 @@ import styles from './index.module.scss';
 type LocaleSwitcherSelectProps = {
   children: ReactNode;
   defaultValue: string;
-  label: string;
 };
 
 function LocaleSwitcherSelect({
   children,
   defaultValue,
-  label
 }: LocaleSwitcherSelectProps) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -59,7 +57,7 @@ export default function LocaleSwitcher() {
   const locale = useLocale();
 
   return (
-    <LocaleSwitcherSelect defaultValue={locale} label={t('label')}>
+    <LocaleSwitcherSelect defaultValue={locale}>
       {routing.locales.map((cur) => (
         <option key={cur} value={cur}>
           {t('locale', {locale: cur})}

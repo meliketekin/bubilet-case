@@ -3,7 +3,7 @@
 import { SeatStatusEnum } from '@/enums';
 import { Seat, SeatMapProps } from '@/interfaces';
 import { useTranslations } from 'next-intl';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback } from 'react';
 import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
 import styles from './index.module.scss';
 
