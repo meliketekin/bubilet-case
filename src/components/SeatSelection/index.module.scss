@@ -37,6 +37,7 @@
   .mainContent {
     grid-template-columns: 1fr;
     gap: 16px;
+    padding: 8px;
   }
   .rightPanel {
     position: static;
@@ -49,6 +50,7 @@
   }
   .mainContent {
     gap: 12px;
+    padding: 2px;
   }
   .leftPanel {
     padding: 16px;

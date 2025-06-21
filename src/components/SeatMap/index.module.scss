@@ -121,6 +121,7 @@
   transition: all 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px);
+  white-space: nowrap; // Prevents the content from wrapping to a new line
 
   &:hover {
     background: white;
