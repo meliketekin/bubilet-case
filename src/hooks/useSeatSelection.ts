@@ -12,42 +12,15 @@ export const useSeatSelection = () => {
     const seats: Seat[] = [];
     const totalRows = 12;
 
-    const occupiedSeatIds = [
-      '1-1',
-      '1-2',
-      '1-4',
-      '1-5',
-      '2-2',
-      '2-5',
-      '3-3',
-      '3-5',
-      '3-7',
-      '4-2',
-      '4-6',
-      '5-3',
-      '5-7',
-      '6-4',
-      '6-8',
-      '7-2',
-      '7-9',
-      '8-3',
-      '8-8',
-      '9-1',
-      '9-10',
-      '10-1',
-      '10-5',
-      '11-2',
-      '11-8',
-      '12-4',
-      '12-10'
-    ];
+    const occupiedSeatIds = ['1-1','1-2','1-4','1-5','2-2','2-5','3-3','3-5','3-7','4-2','4-6','5-3','5-7','6-4','6-8','7-2','7-9','8-3','8-8','9-1','9-10','10-1','10-5','11-2','11-8','12-4','12-10'];
     const reservedSeatIds = ['1-3', '2-4', '4-7', '6-2', '9-5', '11-6'];
+
 
     for (let row = 1; row <= totalRows; row++) {
       let seatsInRow = 12;
 
       if (row <= 8) {
-        seatsInRow = row <= 5 ? 10 + row * 2 : 12;
+        seatsInRow = row <= 5 ? 9 + row * 2 : 12;
       }
 
       for (let seatNum = 1; seatNum <= seatsInRow; seatNum++) {

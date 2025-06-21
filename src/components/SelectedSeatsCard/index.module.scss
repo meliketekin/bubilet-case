@@ -206,6 +206,7 @@
 
 @media (max-width: 480px) {
   .selectedSeatsList {
+    grid-template-columns: repeat(4, 1fr);
     gap: 6px;
   }
     .selectedSeatItem {
